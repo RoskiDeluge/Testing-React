@@ -13,3 +13,4 @@ test("Render App header", () => {
 
     expect(element).toBeVisible();
 })
+
