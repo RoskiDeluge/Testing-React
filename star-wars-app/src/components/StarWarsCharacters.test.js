@@ -11,8 +11,9 @@ test("Render of star wars characters", async () => {
     expect(character[0]).toBeVisible();
 })
 
-test("Previous button click", () => {
+test("Previous button click", async () => {
     const wrapper = rtl.render(<StarWarsCharacters />);
+    const character = await wrapper.findAllByTestId("character");
     const nextButton = wrapper.getByText(/next/i);
     const previousButton = wrapper.getByText(/previous/i);
 
@@ -20,12 +21,12 @@ test("Previous button click", () => {
         rtl.fireEvent.click(previousButton);
     });
 
-    // assert that previous is not null
     expect(nextButton).not.toBeDisabled();
 })
 
 test("Next button click", () => {
     const wrapper = rtl.render(<StarWarsCharacters />);
+    // const character = await wrapper.findAllByTestId("character");
     const nextButton = wrapper.getByText(/next/i);
     const previousButton = wrapper.getByText(/previous/i);
 
