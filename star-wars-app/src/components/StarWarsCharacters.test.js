@@ -1,8 +1,7 @@
 import React from 'react';
 import * as rtl from '@testing-library/react';
 import "@testing-library/jest-dom/extend-expect";
-import StarWarsCharacters from './StarWarsCharacters'
-import axios from 'axios';
+import StarWarsCharacters from './StarWarsCharacters';
 
 
 test("Render of star wars characters", async () => {
@@ -26,7 +25,6 @@ test("Previous button click", async () => {
 
 test("Next button click", () => {
     const wrapper = rtl.render(<StarWarsCharacters />);
-    // const character = await wrapper.findAllByTestId("character");
     const nextButton = wrapper.getByText(/next/i);
     const previousButton = wrapper.getByText(/previous/i);
 
