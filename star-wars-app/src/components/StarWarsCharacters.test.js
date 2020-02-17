@@ -10,7 +10,7 @@ test("Render of star wars characters", async () => {
     expect(character[0]).toBeVisible();
 })
 
-test("Previous button click", async () => {
+test("Previous button click", () => {
     const wrapper = rtl.render(<StarWarsCharacters />);
     // const character = await wrapper.findAllByTestId("character");
     const nextButton = wrapper.getByText(/next/i);

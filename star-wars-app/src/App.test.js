@@ -4,10 +4,9 @@ import "@testing-library/jest-dom/extend-expect";
 import App from './App';
 
 
-
+//Arrange, Act, Assert
 
 test("Render App header", () => {
-    //Arrange, Act, Assert
     const wrapper = rtl.render(<App />);
 
     const element = wrapper.getByAltText(/logo/i);
