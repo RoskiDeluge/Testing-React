@@ -12,7 +12,7 @@ test("Render of star wars characters", async () => {
 
 test("Previous button click", async () => {
     const wrapper = rtl.render(<StarWarsCharacters />);
-    const character = await wrapper.findAllByTestId("character");
+    // const character = await wrapper.findAllByTestId("character");
     const nextButton = wrapper.getByText(/next/i);
     const previousButton = wrapper.getByText(/previous/i);
 
@@ -20,7 +20,7 @@ test("Previous button click", async () => {
         rtl.fireEvent.click(previousButton);
     });
 
-    expect(nextButton).not.toBeDisabled();
+    expect(nextButton).toBeDisabled();
 })
 
 test("Next button click", () => {

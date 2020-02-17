@@ -7,6 +7,7 @@ import App from './App';
 
 
 test("Render App header", () => {
+    //Arrange, Act, Assert
     const wrapper = rtl.render(<App />);
 
     const element = wrapper.getByAltText(/logo/i);
